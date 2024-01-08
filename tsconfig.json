@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "baseUrl": "./",
+
+    "paths": {
+      "service_one/*": ["fileComparison/*"]
+    }
+  },
+  "include": ["fileComparison/"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,149 @@
+body {
+  font-family: "Rubik", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
+  padding: 8px;
+  margin: 0;
+}
+
+.header-section {
+  margin: 0 auto;
+  padding: 24px;
+  background: #191d32;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.header-section h1 {
+  font-size: "36px";
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.header-section p {
+  font-size: "16px";
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.highlight {
+  color: #a6d49f;
+}
+
+.home-button {
+  background: #ba2c73;
+  padding: 16px 32px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  transition: 500ms;
+  cursor: pointer;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.home-button:hover {
+  background: #fafafa;
+  color: #ba2c73;
+}
+
+.wrapper {
+  background: #282f44;
+  padding: 24px;
+}
+
+.compare-container {
+  background: #282f44;
+  padding: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 24px;
+  min-height: calc(100dvh - 348px);
+
+  @media only screen and (max-width: 600px) {
+    flex-wrap: nowrap;
+    justify-content: start;
+    overflow: auto;
+  }
+}
+
+.text-editor {
+  padding: 16px;
+  background: #fff;
+  border-radius: 4px;
+  max-width: 800px;
+  height: calc(100% - 32px);
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  word-spacing: -4px;
+  line-height: 24px;
+}
+
+.added {
+  background: rgb(73, 139, 79);
+  color: #fff;
+  padding: 2px 8px;
+}
+
+.deleted {
+  color: #fff;
+  background: rgb(227, 113, 113);
+  padding: 2px 8px;
+}
+
+.file-preview h2 {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.footer {
+  padding: 32px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.footer h6 {
+  font-size: 16px;
+  color: #ba2c73;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* identical */
+
+.identical {
+  text-align: center;
+}
+
+.identical h2 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #191d32;
+  margin: 0;
+}
+
+.identical p {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 400;
+  padding: 8px 16px;
+  background: rgb(87, 179, 87);
+}

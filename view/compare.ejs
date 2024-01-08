@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./compare-styles.css"></style>
+    <title>PDF</title>
+  </head>
+  <body>
+    <section class="header-section">
+      <div>
+        <h1><span class="highlight">PDF</span> Comparison</h1>
+        <p>Compare PDF's easily</p>
+      </div>
+      <button class="home-button" onclick="location.href='/'">
+      Go Back
+      </button>
+    </section>
+    
+    <section class="wrapper">
+      <div class="compare-container">
+        <% if (successMessage) { %>
+        <div class="identical">
+          <h2>Yippe!</h2>
+          <p>Uploaded Files are Identical</p>
+        </div>
+        <% } 
+        else { %>
+
+            <div class="file-preview">
+            <h2><%-firstFile %></h2>     
+            <!-- REMOVER -->
+            <div class="text-editor">
+              <% data.forEach(part => { %>
+                <% if (!part.removed && !part.added) { %>
+                  <span><%- part.value.replace(/\n/g, '<br />') %></span>
+                <% } %>
+                <% if (part.removed) { %>
+                  <span class="deleted"><%- part.value.replace(/\n/g, '<br />') %></span>
+                <% } %>
+              <% }); %>
+            </div>
+            </div>
+            <div class="file-preview">
+              <h2><%-secondFile %></h2> 
+              <div class="text-editor">
+                <% data.forEach(part => { %>
+                  <% if (!part.removed && !part.added) { %>
+                    <span><%- part.value.replace(/\n/g, '<br />') %></span>
+                  <% } %>
+                  <% if (part.added) { %>
+                    <span class="added"><%- part.value.replace(/\n/g, '<br />') %></span>
+                  <% } %>
+                <% }); %>
+              </div>
+            </div>
+            <% } %> 
+      </div>
+      <div class="footer">
+        <h6>That's all ✌️</h6>
+      </div>
+    </section>
+   
+  </body>
+</html>

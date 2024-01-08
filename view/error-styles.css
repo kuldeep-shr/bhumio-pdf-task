@@ -1,0 +1,50 @@
+body {
+  font-family: "Rubik", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",
+    sans-serif;
+  padding: 8px;
+  margin: 0;
+}
+
+.header-section {
+  margin: 0 auto;
+  padding: 24px;
+  background: #191d32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: calc(100dvh - 64px);
+  width: calc(100dvw - 64px);
+  flex-direction: column;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.header-section h2 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #282f44;
+  margin: 0;
+}
+
+.header-section p {
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.identical {
+  text-align: center;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./styles.css"></style>
+    <title>PDF</title>
+  </head>
+  <body>
+    <script>  
+      // Check if an error occurred
+      if (isError) {
+        // Set a timeout to reload the page after 3000 milliseconds (3 seconds)
+        setTimeout(() => {
+          location.reload();
+        }, 3000);
+      }
+    </script>
+    <form
+      action="/compare"
+        method="post"
+        enctype="multipart/form-data"
+        >
+    <section class="header-section">
+      <div>
+        <h1><span class="highlight">PDF</span> Comparison</h1>
+        <p>Compare PDF's easily</p>
+      </div>
+     
+      <button class="compare-button" type="submit">
+        Compare
+      </button>
+    </section>
+    <section class="upload-container">
+   
+      <div class="upload-tile">
+        <i class="fa fa-upload icon-white" aria-hidden="true"></i>
+        <h6>Upload File</h6>  
+        <label  class="upload-button">
+          Upload
+          <input type="file" name="files" accept=".pdf" required   />
+      </div>
+  
+      <div class="divider"></div>
+
+ 
+      <div class="upload-tile">
+        <i class="fa fa-upload icon-white" aria-hidden="true"></i>
+        <h6>Upload File</h6>  
+        <label  class="upload-button">
+          Upload
+          <input type="file" name="files" accept=".pdf" required  />
+        </label>
+      </div>    
+    </section>
+
+    <!-- success -->
+    
+    <div class="modal-container">
+      <!-- <% if (successMessage) { %>
+
+      <div class="modal success-modal">
+        File Uploaded! 🎉
+      </div>
+      <% } %> -->
+
+      <% if (errorMessage) { %>
+      <div class="modal error-modal">
+        Eww! Error 🙅‍♂️  <br/>
+        <p><%= errorMessage %></p>
+        <script>
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 2000);
+        </script>
+      </div>
+      <% } %>
+
+    </div>
+  </form>
+
+  </body>
+</html>
