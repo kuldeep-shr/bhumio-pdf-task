@@ -59,7 +59,6 @@ export const pdfPages = async (req: Request, res: Response) => {
     //if by chance fill will get uploaded and it's showing something wrong then delete the folder
     deleteFolder(`${String(process.env.FILE_PATH)}`);
     if (err.err["message"]) {
-      console.log("IF");
       const dataToRender = {
         pageName: "index",
         successMessage: false,
