@@ -12,6 +12,7 @@ A simple and easy tool to compare the PDF, whether it's Identical or not.
 3. `pdf-parse` npm library 📜
 4. node `fs` module
 5. `diff` npm, especially for text comparison (Because Details Matter) 🕵️‍♂️
+6. `crypto` npm, generating hash for each file ₿
 
 ## Installation Steps:
 
