@@ -4,7 +4,7 @@
 <br>
 A simple and easy tool to compare the PDF, whether it's Identical or not.
 
-**Main things we used**
+## Main things we used:
 <br>
 
 1. `Typescript[Node JS]`
